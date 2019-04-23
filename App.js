@@ -1,5 +1,6 @@
 import React from 'react'; // This imports React from the 'react' package
 import { WEATHER_API_KEY } from 'react-native-dotenv'
+console.log('WEATHER_API_KEY:', WEATHER_API_KEY) // "anything"
 // This imports two native Components: `Text`, and `View` from the 'react-native' package.
 // `StyleSheet` is a helper Object for creating styles sheets in React Native. 
 import { StyleSheet, Text, View } from 'react-native'; 
@@ -49,7 +50,7 @@ export default class App extends React.Component {
     return (
       // This is a View component with a child Text component. These are displayed on the screen in the default app. Remember these were imported above.
       <View style={styles.container}>
-        <DisplayWeather />
+        <DisplayWeather data={this.state.weather}/>
       </View>
     );
   }
