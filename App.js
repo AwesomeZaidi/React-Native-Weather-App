@@ -2,7 +2,7 @@ import React from 'react'; // This imports React from the 'react' package
 // This imports two native Components: `Text`, and `View` from the 'react-native' package.
 // `StyleSheet` is a helper Object for creating styles sheets in React Native. 
 import { StyleSheet, Text, View } from 'react-native'; 
-
+import DisplayWeather from './Components/DisplayWeather'
 // The next block of code is the definition of a component. This component is named App, and it extends `React.Component`.
 // Components that extend `React.Component` must implement a render function. The `render()` method must return JSX.
 export default class App extends React.Component {
@@ -11,7 +11,7 @@ export default class App extends React.Component {
     return (
       // This is a View component with a child Text component. These are displayed on the screen in the default app. Remember these were imported above.
       <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
+        <DisplayWeather />
       </View>
     );
   }
